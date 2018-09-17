@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style>
+			#input-box {
+				height: 200px;
+			}
+			#output {
+				font-size: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Put your list here:</p>
+		<textarea id="input-box" name="Text1" cols="40" rows="5"></textarea>
+		<button id="submit" type="button">Submit</button>
+		<p id="output"></p>
+		<script>
+		let Submit = document.getElementById('submit');
+		let Input = document.getElementById('input-box');
+
+		var lines = require('fs').readFileSync('Input', 'utf-8')
+			.split('\n')
+			.filter(Boolean);
+		arrno = Math.floor(Math.random() * lines.length);
+		document.getElementById("output").innerHTML = lines[arrno];
+		</script>
+	</body>
+</html>
