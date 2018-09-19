@@ -1,8 +1,14 @@
-let Submit = document.getElementById('submit');
-let Input = document.getElementById('input-box');
-
-var lines = require('fs').readFileSync('Input', 'utf-8')
-	.split('\n')
-	.filter(Boolean);
-arrno = Math.floor(Math.random() * lines.length);
-document.getElementById("output").innerHTML = lines[arrno];
+document.getElementById("submit").onclick = function(element) {
+	Input = document.getElementById('input-box');
+	var lines = Input.value
+		.split('\n')
+		.filter(Boolean);
+	console.log(Input.value);
+	if (lines.length != 0) {
+		arrno = Math.floor(Math.random() * lines.length);
+		document.getElementById("output").innerHTML = lines[arrno];
+	}
+	else {
+		document.getElementById("output").innerHTML = "No items";
+	}
+}
