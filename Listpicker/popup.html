@@ -1,18 +1,33 @@
 <html>
-	<head>
-		<style>
-			#input-box {
-				height: 200px;
-			}
-			#output {
-				font-size: 28px;
-			}
-		</style>
-	</head>
-	<body>
-		<textarea id="input-box" name="Text1" cols="40" rows="5" placeholder="Put your list here"></textarea>
-		<button id="submit" type="button">Submit</button>
-		<p id="output"></p>
-		<script src="popup.js"></script>
-	</body>
+  <head>
+    <style>
+      body {
+        padding: 5px 5px 10px 5px
+      }
+      #input-box {
+        height: 200px;
+        width: 300px;
+        outline: none;
+        resize: none;
+        border-radius: 2px;
+      }
+      #submit{
+        margin-top: 5px;
+        font-size: 18px;
+        border: none;
+        border-radius: 2px;
+      }
+      #output {
+        margin-top: 5px;
+        font-size: 28px;
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="input-box" placeholder="Put your list here (one item per line)"></textarea>
+    <button id="submit" type="button">Submit</button>
+    <p id="output"></p>
+    <script src="popup.js"></script>
+  </body>
 </html>
